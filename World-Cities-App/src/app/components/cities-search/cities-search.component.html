@@ -5,16 +5,22 @@
   <div class="input-container">
     <div class="search-text">Please enter the name of the city</div>
     <div class="container">
-      <input type="text" placeholder="Example: Paris" class="search-input" [(ngModel)]="searchText" (ngModelChange)="textUpdate.next($event)">
+      <input type="text" #carSearchInput class="search-input" [(ngModel)]="searchText" (ngModelChange)="textUpdate.next($event)">
     </div>
     <div class="text-container">
       <div class="text-format">{{textError}}</div>
     </div>
   </div>
   <div class="container">
-    <div *ngIf="citiesToPresent.length == 0" class="text-notFound">No Cities found</div>
-    <ol *ngFor="let city of citiesToPresent">
-          <div>{{city.cityName}}</div>
-  </ol>
+    <!--  DropDown Starts  -->
+    <div class="card" [hidden]="!showSearches">
+      <div class="search">
+        <div *ngFor="let city of citiesToPresent" tappable (click)="setCityName(city.cityName)" class="search-result">
+            {{city.cityName}}
+        </div>     
+      </div>
+      <div *ngIf="citiesToPresent.length == 0" class="text-notFound">No Cities found</div>
+    </div>
+<!--  DropDown Ends  -->
   </div>
 </div>
