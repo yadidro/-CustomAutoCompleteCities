@@ -1,26 +1,16 @@
 <div class="body">
-  <div class="container">
-    <div class="title">Welcome to World Cities</div>
+  <div class="header">
+    <div class="title">World Cities Autocomplete Component</div>
   </div>
-  <div class="input-container">
-    <div class="search-text">Please enter the name of the city</div>
-    <div class="container">
-      <input type="text" class="search-input" [(ngModel)]="searchText" (ngModelChange)="textUpdate.next($event)">
-    </div>
-    <div class="text-container">
+  <div class="subHeader">Start typing the name of the desired city</div>
+    <div class="city-input">
+       <input type="text" class="search-input" [(ngModel)]="searchText" (ngModelChange)="textUpdate.next($event)"/>
       <div class="text-format">{{textError}}</div>
+      <div class="dropDown" [hidden]="!showSearches">
+          <div *ngFor="let city of citiesToPresent" tappable (click)="setCityName(city.cityName)" class="search-result">
+           {{city.cityName}}
+          </div>     
+        <div *ngIf="citiesToPresent.length == 0" class="text-notFound">No Cities found</div>
+      </div> 
     </div>
-  </div>
-  <div class="container">
-    <!--  DropDown Starts  -->
-    <div class="card" [hidden]="!showSearches">
-      <div class="search">
-        <div *ngFor="let city of citiesToPresent" tappable (click)="setCityName(city.cityName)" class="search-result">
-            {{city.cityName}}
-        </div>     
-      </div>
-      <div *ngIf="citiesToPresent.length == 0" class="text-notFound">No Cities found</div>
-    </div>
-<!--  DropDown Ends  -->
-  </div>
 </div>
