@@ -1,0 +1,14 @@
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\bin\Debug\net7.0\WorldCitiesDAL.deps.json
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\bin\Debug\net7.0\WorldCitiesDAL.runtimeconfig.json
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\bin\Debug\net7.0\WorldCitiesDAL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\bin\Debug\net7.0\WorldCitiesDAL.pdb
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.csproj.AssemblyReference.cache
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.AssemblyInfoInputs.cache
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.AssemblyInfo.cs
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.csproj.CoreCompileInputs.cache
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\refint\WorldCitiesDAL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.pdb
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\WorldCitiesDAL.genruntimeconfig.cache
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesDAL\obj\Debug\net7.0\ref\WorldCitiesDAL.dll

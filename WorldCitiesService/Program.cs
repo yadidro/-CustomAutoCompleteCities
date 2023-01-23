@@ -1,3 +1,7 @@
+using BookingFlightService.BookingFlightDAL.DBContexts;
+using Microsoft.EntityFrameworkCore;
+using WorldCitiesService.WorldCitiesBL.Repositories;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +11,10 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddDbContext<WorldCitiesContext>(
+      options => options.UseSqlServer("name=ConnectionStrings:DatabaseConnection"));
+
+builder.Services.AddTransient<IWorldCitiesRepository, WorldCitiesRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

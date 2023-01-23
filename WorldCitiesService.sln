@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCitiesService", "WorldCitiesService\WorldCitiesService.csproj", "{7C50BA66-732D-4FBE-8F5A-3104686490A9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WorldCitiesAPI", "WorldCitiesService\WorldCitiesAPI.csproj", "{7C50BA66-732D-4FBE-8F5A-3104686490A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCitiesBL", "WorldCitiesBL\WorldCitiesBL.csproj", "{2824E774-3BA0-4209-85B8-62FF23CFCAAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WorldCitiesDAL", "WorldCitiesDAL\WorldCitiesDAL.csproj", "{23B4217D-BA0A-43FD-A1EB-0B18A97BC266}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{7C50BA66-732D-4FBE-8F5A-3104686490A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7C50BA66-732D-4FBE-8F5A-3104686490A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7C50BA66-732D-4FBE-8F5A-3104686490A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2824E774-3BA0-4209-85B8-62FF23CFCAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2824E774-3BA0-4209-85B8-62FF23CFCAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2824E774-3BA0-4209-85B8-62FF23CFCAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2824E774-3BA0-4209-85B8-62FF23CFCAAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23B4217D-BA0A-43FD-A1EB-0B18A97BC266}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23B4217D-BA0A-43FD-A1EB-0B18A97BC266}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23B4217D-BA0A-43FD-A1EB-0B18A97BC266}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23B4217D-BA0A-43FD-A1EB-0B18A97BC266}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

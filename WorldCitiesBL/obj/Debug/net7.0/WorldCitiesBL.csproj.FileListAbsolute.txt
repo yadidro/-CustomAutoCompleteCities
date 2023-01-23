@@ -1,0 +1,15 @@
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\bin\Debug\net7.0\WorldCitiesBL.deps.json
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\bin\Debug\net7.0\WorldCitiesBL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\bin\Debug\net7.0\WorldCitiesBL.pdb
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.csproj.AssemblyReference.cache
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.AssemblyInfoInputs.cache
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.AssemblyInfo.cs
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.csproj.CoreCompileInputs.cache
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\refint\WorldCitiesBL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.pdb
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\ref\WorldCitiesBL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\bin\Debug\net7.0\WorldCitiesDAL.dll
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\bin\Debug\net7.0\WorldCitiesDAL.pdb
+C:\Users\97252\source\repos\WorldCitiesService\WorldCitiesBL\obj\Debug\net7.0\WorldCitiesBL.csproj.CopyComplete
