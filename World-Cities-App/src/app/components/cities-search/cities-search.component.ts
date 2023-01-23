@@ -17,7 +17,6 @@ export class CitiesSearchComponent {
   textUpdate = new Subject<string>();
   searchText: string = "";
   showSearches: boolean = false;
-  @ViewChild('citySearchInput') citySearchInput: ElementRef | undefined;
 
   constructor(private citiesService: CitiesService) {
     this.textUpdate.pipe(
@@ -37,16 +36,17 @@ export class CitiesSearchComponent {
     }
 
     if (this.cities.length != 0) {
+      
       this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
-        .startsWith(prefix.toLowerCase())).slice(0, 10);
+        .startsWith(prefix.toLowerCase()));
         this.showSearches=true;
       return;
     }
 
     if (this.checkTextValid(prefix)) {
-      this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
+      this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {  
         this.cities = res;
-        this.citiesToPresent = res.slice(0, 100);
+        this.citiesToPresent = res;
         this.textError = "";
         this.showSearches=true;
       }, err => {
