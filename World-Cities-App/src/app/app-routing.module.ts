@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { RouterModule, Routes } from "@angular/router";
-import { CitiesSearchComponent } from "./components/cities-search/cities-search.component";
+import { CitiesSearchComponent } from "./cities-search/cities-search.component";
 
 const routes: Routes = [
     {
