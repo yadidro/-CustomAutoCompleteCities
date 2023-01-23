@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using WorldCitiesService.WorldCitiesBL.Repositories;
 
@@ -18,6 +19,7 @@ public class WorldCitiesController : ControllerBase
     }
 
     [Route("cities")]
+    [EnableCors("AllowOrigin")]
     [HttpGet]
     public IActionResult Get([FromQuery] string prefix)
     {

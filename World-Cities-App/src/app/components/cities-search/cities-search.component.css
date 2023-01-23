@@ -1,0 +1,16 @@
+.body {
+    background-color: #ced0ed;
+    min-height: 100vh;
+}
+
+.input-container {
+    display: flex;
+    margin: 15px;
+}
+
+.search-text {
+    color: black;
+    font-weight: 600;
+    font-size: large;
+    padding: 10px;
+}
