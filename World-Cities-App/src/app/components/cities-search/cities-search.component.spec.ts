@@ -1,11 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule } from '@angular/forms';
-import { ErrorTextComponent } from '../ui/error-text/error-text.component';
-import { HeaderComponent } from '../ui/header/header.component';
-import { InputComponent } from '../ui/input/input.component';
-import { ListComponent } from '../ui/list/list.component';
-import { LoaderComponent } from '../ui/loader/loader.component';
 
 import { CitiesSearchComponent } from './cities-search.component';
 
@@ -15,7 +10,7 @@ describe('CitiesSearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CitiesSearchComponent, HeaderComponent, LoaderComponent, ErrorTextComponent, ListComponent, InputComponent ],
+      declarations: [ CitiesSearchComponent],
       imports: [FormsModule, HttpClientModule]
     })
     .compileComponents();

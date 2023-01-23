@@ -20,7 +20,6 @@ export class CitiesSearchComponent {
 
   constructor(private citiesService: CitiesService) {
     this.textUpdate.pipe(
-      debounceTime(300),
       distinctUntilChanged())
       .subscribe(value => {
         this.onChangeInput();
@@ -32,6 +31,7 @@ export class CitiesSearchComponent {
       this.cities = [];
       this.citiesToPresent = [];
       this.showSearches=false;
+      this.textError = "";
       return;
     }
 
@@ -51,10 +51,10 @@ export class CitiesSearchComponent {
         this.showSearches=true;
       }, err => {
         console.log(err);
-        this.textError = "An error has occured, please try again later";
+        this.textError = err.error;
       })
     } else {
-      this.textError = "Text should not contain any special character";
+      this.textError = "Text should not contain any special characters or numbers";
     }
   }
 
@@ -63,7 +63,7 @@ export class CitiesSearchComponent {
   }
 
   checkTextValid(text: string): boolean {
-    return /^$|^[a-zA-ZÀ-ÖØ-öø-ÿ0-9 ]+$/.test(text);
+    return /^$|^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/.test(text);
   }
 
   setCityName(name: string) {

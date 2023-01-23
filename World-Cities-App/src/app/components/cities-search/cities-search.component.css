@@ -1,9 +1,30 @@
 .body {
-    background-color: #ced0ed;
+    background-color: #0ef32d;
     min-height: 100vh;
 }
 
-.card {
+.dropDown {
     background-color: #e6e6eb;
-    max-width: 19vh;
+    max-width: 30vh;
+    max-height: 60vh;
+    text-align: center;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+.header {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    background-color: rgb(12, 110, 56);
+}
+
+.subHeader {
+    color: rgb(3, 17, 29);
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+input{
+    width: 29vh;
 }

@@ -1,4 +1,5 @@
 ﻿using BookingFlightService.BookingFlightDAL.DBContexts;
+using WorldCitiesBL;
 using WorldCitiesService.WorldCitiesDAL.Models;
 
 namespace WorldCitiesService.WorldCitiesBL.Repositories
@@ -12,13 +13,18 @@ namespace WorldCitiesService.WorldCitiesBL.Repositories
     {
         private readonly WorldCitiesContext _context;
 
-        public WorldCitiesRepository(WorldCitiesContext context)
+        private readonly IWorldCitiesValidator _worldCitiesValidator;
+
+        public WorldCitiesRepository(WorldCitiesContext context, IWorldCitiesValidator worldCitiesValidator)
         {
             _context = context;
+            _worldCitiesValidator = worldCitiesValidator;
         }
 
         public IEnumerable<City> GetAllCitiesPrefix(string prefix)
         {
+            _worldCitiesValidator.ValidatePrefix(prefix);
+
             return _context.Cities.Where(city=>city.CityName.StartsWith(prefix)).ToList();
         }
     }
