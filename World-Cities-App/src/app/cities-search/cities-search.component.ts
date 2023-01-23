@@ -1,8 +1,8 @@
-import { Component, ViewChild, ElementRef, } from '@angular/core';
+import { Component } from '@angular/core';
 import { CitiesService } from '../services/cities/cities.service';
 import { City } from '../models/city-model'
 import { Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged } from 'rxjs/operators';
+import { distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cities-search',
@@ -30,25 +30,24 @@ export class CitiesSearchComponent {
     if (prefix == "") {
       this.cities = [];
       this.citiesToPresent = [];
-      this.showSearches=false;
+      this.showSearches = false;
       this.textError = "";
       return;
     }
 
     if (this.cities.length != 0) {
-      
       this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
         .startsWith(prefix.toLowerCase()));
-        this.showSearches=true;
+      this.showSearches = true;
       return;
     }
 
     if (this.checkTextValid(prefix)) {
-      this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {  
+      this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
         this.cities = res;
         this.citiesToPresent = res;
         this.textError = "";
-        this.showSearches=true;
+        this.showSearches = true;
       }, err => {
         console.log(err);
         this.textError = err.error;
