@@ -34,6 +34,7 @@ export class CitiesSearchComponent {
     }
     if (this.checkTextValid(prefix)) {
       this.textError = ""
+      this.showSearches = true;
       if (this.cities.length != 0)
         this.searchCityFromExistingList(prefix);
       else
@@ -43,7 +44,7 @@ export class CitiesSearchComponent {
       this.showSearches = false;
     }
   }
-  
+
   private reset() {
     this.cities = [];
     this.citiesToPresent = [];
@@ -58,15 +59,12 @@ export class CitiesSearchComponent {
   private searchCityFromExistingList(prefix: string) {
     this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
       .startsWith(prefix.toLowerCase()));
-    this.showSearches = true;
   }
 
   private searchCityFromService(prefix: string) {
     this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
       this.cities = res;
       this.citiesToPresent = res;
-      this.textError = "";
-      this.showSearches = true;
     }, err => {
       console.log(err);
       this.textError = err.error;
