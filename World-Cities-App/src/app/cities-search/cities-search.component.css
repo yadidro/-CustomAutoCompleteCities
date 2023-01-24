@@ -3,15 +3,6 @@
     min-height: 100vh;
 }
 
-.dropDown {
-    background-color: #e6e6eb;
-    max-width: 30vh;
-    max-height: 60vh;
-    text-align: center;
-    overflow-y: auto;
-    margin-bottom: 20px;
-}
-
 .header {
     text-align: center;
     color: white;
@@ -27,8 +18,4 @@
 
 input {
     width: 29vh;
-}
-
-span.CityItem:hover {
-    border: 1px solid blue;
 }

@@ -1,8 +1,6 @@
 import { Component } from '@angular/core';
 import { CitiesService } from '../services/cities/cities.service';
 import { City } from '../models/city-model'
-import { Subject } from 'rxjs';
-import { distinctUntilChanged } from 'rxjs/operators';
 
 @Component({
   selector: 'app-cities-search',

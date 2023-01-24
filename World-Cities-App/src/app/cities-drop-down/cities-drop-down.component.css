@@ -1,0 +1,12 @@
+.dropDown {
+    background-color: #e6e6eb;
+    max-width: 30vh;
+    max-height: 60vh;
+    text-align: center;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+
+span.CityItem:hover {
+    border: 1px solid blue;
+}

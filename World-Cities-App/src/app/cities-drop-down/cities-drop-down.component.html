@@ -1,0 +1,6 @@
+<div class="dropDown" [hidden]="!showSearches">
+    <div *ngFor="let city of citiesToPresent" tappable (click)="setCityName(city.cityName)" class="search-result">
+     <span class="CityItem" >{{city.cityName}}</span> 
+    </div>
+    <div *ngIf="citiesToPresent.length == 0" class="text-notFound">No Cities found</div>
+  </div>

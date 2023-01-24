@@ -6,11 +6,6 @@
   <div class="city-input">
     <input type="text" class="search-input" [(ngModel)]="searchText" (keyup)="onChangeInput()" />
     <div class="text-format">{{textError}}</div>
-    <div class="dropDown" [hidden]="!showSearches">
-      <div *ngFor="let city of citiesToPresent" tappable (click)="setCityName(city.cityName)" class="search-result">
-       <span class="CityItem" >{{city.cityName}}</span> 
-      </div>
-      <div *ngIf="citiesToPresent.length == 0" class="text-notFound">No Cities found</div>
-    </div>
+    <app-cities-drop-down [showSearches]="showSearches" [citiesToPresent]="citiesToPresent" (setCity)="setCityName($event)" ></app-cities-drop-down>
   </div>
 </div>
