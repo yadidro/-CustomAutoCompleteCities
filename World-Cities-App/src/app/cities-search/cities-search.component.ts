@@ -14,16 +14,10 @@ export class CitiesSearchComponent {
   public cities: City[] = [];
   public citiesToPresent: City[] = [];
   textError: string = "";
-  textUpdate = new Subject<string>();
   searchText: string = "";
   showSearches: boolean = false;
 
   constructor(private citiesService: CitiesService) {
-    this.textUpdate.pipe(
-      distinctUntilChanged())
-      .subscribe(value => {
-        this.onChangeInput();
-      })
   }
 
   searchCities(prefix: string = "") {

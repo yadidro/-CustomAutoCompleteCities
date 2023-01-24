@@ -4,7 +4,7 @@
   </div>
   <div class="subHeader">Start typing the name of the desired city</div>
   <div class="city-input">
-    <input type="text" class="search-input" [(ngModel)]="searchText" (ngModelChange)="textUpdate.next($event)" />
+    <input type="text" class="search-input" [(ngModel)]="searchText" (keyup)="onChangeInput()" />
     <div class="text-format">{{textError}}</div>
     <div class="dropDown" [hidden]="!showSearches">
       <div *ngFor="let city of citiesToPresent" tappable (click)="setCityName(city.cityName)" class="search-result">
