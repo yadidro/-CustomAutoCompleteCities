@@ -36,9 +36,11 @@ export class CitiesSearchComponent {
       this.textError = ""
       if (this.cities.length != 0)
         this.searchCityFromExistingList(prefix);
-      else
-        this.searchCityFromService(prefix);
-      
+      else {
+        if (prefix.length == 1) //only first letter prefix going to service
+          this.searchCityFromService(prefix);
+      }
+
     } else {
       this.textError = "Text should not contain any special characters or numbers";
       this.showSearches = false;
@@ -59,13 +61,14 @@ export class CitiesSearchComponent {
   private searchCityFromExistingList(prefix: string) {
     this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
       .startsWith(prefix.toLowerCase()));
-      this.showSearches = true;
+    this.showSearches = true;
   }
 
   private searchCityFromService(prefix: string) {
     this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
       this.cities = res;
-      this.citiesToPresent = res;
+      this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
+        .startsWith(this.searchText.toLowerCase()));;
       this.showSearches = true;
     }, err => {
       this.showSearches = false;
