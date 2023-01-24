@@ -1,7 +1,6 @@
-using BookingFlightService.BookingFlightDAL.DBContexts;
 using Microsoft.EntityFrameworkCore;
 using WorldCitiesBL;
-using WorldCitiesService.WorldCitiesBL.Repositories;
+using WorldCitiesDAL.DBContexts;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,8 +1,7 @@
-﻿using BookingFlightService.BookingFlightDAL.DBContexts;
-using WorldCitiesBL;
+﻿using WorldCitiesDAL.DBContexts;
 using WorldCitiesService.WorldCitiesDAL.Models;
 
-namespace WorldCitiesService.WorldCitiesBL.Repositories
+namespace WorldCitiesBL
 {
     public interface IWorldCitiesRepository
     {

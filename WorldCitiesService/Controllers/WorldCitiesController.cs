@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
-using WorldCitiesService.WorldCitiesBL.Repositories;
+using WorldCitiesBL;
 
-namespace BookingFlightService.Controllers;
+namespace WorldCitiesAPI.Controllers;
 
 [ApiController]
 [Route("")]
@@ -26,12 +26,12 @@ public class WorldCitiesController : ControllerBase
         try
         {
             _logger.LogInformation("Got Get request at {DT}",
-           DateTime.UtcNow.ToLongTimeString());
+                DateTime.UtcNow.ToLongTimeString());
 
             var res = _worldCitiesRepository.GetAllCitiesPrefix(prefix);
 
-            _logger.LogInformation("Get request sucseesfully handeld {DT}",
-         DateTime.UtcNow.ToLongTimeString());
+            _logger.LogInformation("Get request successfully handled {DT}",
+                DateTime.UtcNow.ToLongTimeString());
 
             return Ok(res);
         }

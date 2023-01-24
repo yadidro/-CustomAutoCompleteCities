@@ -1,8 +1,8 @@
-﻿using WorldCitiesService.WorldCitiesDAL.Models;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using WorldCitiesService.WorldCitiesDAL.Models;
 
-namespace BookingFlightService.BookingFlightDAL.DBContexts
+namespace WorldCitiesDAL.DBContexts
 {
     public class WorldCitiesContext : DbContext
     {
