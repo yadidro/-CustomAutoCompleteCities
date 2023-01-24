@@ -28,3 +28,7 @@
 input{
     width: 29vh;
 }
+
+span.CityItem:hover {
+    border: 1px solid blue;
+  }
