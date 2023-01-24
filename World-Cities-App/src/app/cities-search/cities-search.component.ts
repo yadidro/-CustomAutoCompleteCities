@@ -35,18 +35,6 @@ export class CitiesSearchComponent {
     }
   }
 
-  private searchCityFromService(prefix: string) {
-    this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
-      this.cities = res;
-      this.citiesToPresent = res;
-      this.textError = "";
-      this.showSearches = true;
-    }, err => {
-      console.log(err);
-      this.textError = err.error;
-    });
-  }
-
   onChangeInput() {
     this.searchCities(this.searchText);
   }
@@ -71,5 +59,17 @@ export class CitiesSearchComponent {
     this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
       .startsWith(prefix.toLowerCase()));
     this.showSearches = true;
+  }
+
+  private searchCityFromService(prefix: string) {
+    this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
+      this.cities = res;
+      this.citiesToPresent = res;
+      this.textError = "";
+      this.showSearches = true;
+    }, err => {
+      console.log(err);
+      this.textError = err.error;
+    });
   }
 }
