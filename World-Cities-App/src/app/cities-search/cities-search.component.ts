@@ -18,7 +18,16 @@ export class CitiesSearchComponent {
   constructor(private citiesService: CitiesService) {
   }
 
-  searchCities(prefix: string = "") {
+  onChangeInput() {
+    this.searchCities(this.searchText);
+  }
+
+  setCityName(name: string) {
+    this.searchText = name;
+    this.showSearches = false;
+  }
+
+  private searchCities(prefix: string = "") {
     if (prefix == "") {
       this.reset();
       return;
@@ -34,16 +43,7 @@ export class CitiesSearchComponent {
       this.showSearches = false;
     }
   }
-
-  onChangeInput() {
-    this.searchCities(this.searchText);
-  }
-
-  setCityName(name: string) {
-    this.searchText = name;
-    this.showSearches = false;
-  }
-
+  
   private reset() {
     this.cities = [];
     this.citiesToPresent = [];
