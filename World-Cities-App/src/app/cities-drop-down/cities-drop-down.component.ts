@@ -1,4 +1,4 @@
-import { Component,Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { City } from '../models/city-model'
 
 @Component({
@@ -10,9 +10,9 @@ export class CitiesDropDownComponent {
   @Input() showSearches: boolean = false;
   @Input() citiesToPresent: City[] = [];
   @Output() setCity = new EventEmitter<string>();
-
+ 
   setCityName(name: string) {
-          this.setCity.emit(name);
+    this.setCity.emit(name);
   }
 }
 

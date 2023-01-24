@@ -34,11 +34,11 @@ export class CitiesSearchComponent {
     }
     if (this.checkTextValid(prefix)) {
       this.textError = ""
-      this.showSearches = true;
       if (this.cities.length != 0)
         this.searchCityFromExistingList(prefix);
       else
         this.searchCityFromService(prefix);
+      
     } else {
       this.textError = "Text should not contain any special characters or numbers";
       this.showSearches = false;
@@ -59,15 +59,21 @@ export class CitiesSearchComponent {
   private searchCityFromExistingList(prefix: string) {
     this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
       .startsWith(prefix.toLowerCase()));
+      this.showSearches = true;
   }
 
   private searchCityFromService(prefix: string) {
     this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
       this.cities = res;
       this.citiesToPresent = res;
+      this.showSearches = true;
     }, err => {
+      this.showSearches = false;
       console.log(err);
-      this.textError = err.error;
+      if (typeof (err.error) == 'string')
+        this.textError = err.error;
+      else
+        this.textError = "Something went wrong"
     });
   }
 }
