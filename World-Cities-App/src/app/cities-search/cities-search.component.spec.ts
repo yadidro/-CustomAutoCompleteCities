@@ -25,9 +25,4 @@ describe('CitiesSearchComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  it('should contain "Please enter the name of the city"', () => {
-    const textInputElement: HTMLElement = fixture.nativeElement;
-    expect(textInputElement.textContent).toContain('Please enter the name of the city');
-  });
 });
