@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CitiesService } from '../services/cities/cities.service';
+import { ApiService } from '../services/cities/cities.service';
 import { City } from '../models/city-model'
 
 @Component({
@@ -15,7 +15,7 @@ export class CitiesSearchComponent {
   searchText: string = "";
   showSearches: boolean = false;
 
-  constructor(private citiesService: CitiesService) {
+  constructor(private citiesService: ApiService) {
   }
 
   onChangeInput() {
