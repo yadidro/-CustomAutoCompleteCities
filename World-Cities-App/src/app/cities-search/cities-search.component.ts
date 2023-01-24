@@ -20,41 +20,35 @@ export class CitiesSearchComponent {
 
   searchCities(prefix: string = "") {
     if (prefix == "") {
-      this.cities = [];
-      this.citiesToPresent = [];
-      this.showSearches = false;
-      this.textError = "";
+      this.reset();
       return;
     }
-
-    if (this.cities.length != 0) {
-      this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
-        .startsWith(prefix.toLowerCase()));
-      this.showSearches = true;
-      return;
-    }
-
     if (this.checkTextValid(prefix)) {
-      this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
-        this.cities = res;
-        this.citiesToPresent = res;
-        this.textError = "";
-        this.showSearches = true;
-      }, err => {
-        console.log(err);
-        this.textError = err.error;
-      })
+      this.textError = ""
+      if (this.cities.length != 0)
+        this.searchCityFromExistingList(prefix);
+      else
+        this.searchCityFromService(prefix);
     } else {
       this.textError = "Text should not contain any special characters or numbers";
+      this.showSearches = false;
     }
+  }
+
+  private searchCityFromService(prefix: string) {
+    this.citiesService.GetAllCitiesPrefix(prefix).subscribe(res => {
+      this.cities = res;
+      this.citiesToPresent = res;
+      this.textError = "";
+      this.showSearches = true;
+    }, err => {
+      console.log(err);
+      this.textError = err.error;
+    });
   }
 
   onChangeInput() {
     this.searchCities(this.searchText);
-  }
-
-  checkTextValid(text: string): boolean {
-    return /^$|^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/.test(text);
   }
 
   setCityName(name: string) {
@@ -62,4 +56,20 @@ export class CitiesSearchComponent {
     this.showSearches = false;
   }
 
+  private reset() {
+    this.cities = [];
+    this.citiesToPresent = [];
+    this.showSearches = false;
+    this.textError = "";
+  }
+
+  private checkTextValid(text: string): boolean {
+    return /^$|^[a-zA-ZÀ-ÖØ-öø-ÿ]+$/.test(text);
+  }
+
+  private searchCityFromExistingList(prefix: string) {
+    this.citiesToPresent = this.cities.filter(city => city.cityName.toLowerCase()
+      .startsWith(prefix.toLowerCase()));
+    this.showSearches = true;
+  }
 }
